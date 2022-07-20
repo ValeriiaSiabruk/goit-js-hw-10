@@ -11,6 +11,7 @@ const infoBlockEl = document.querySelector('.country-info');
 
 const inputHandler = debounce(({ target: { value } }) => {
   value = value.trim();
+  clearMarkup();
 
   if (!value) return;
 
@@ -27,7 +28,6 @@ const inputHandler = debounce(({ target: { value } }) => {
     })
     .catch(() => {
       Notify.failure('Oops, there is no country with that name');
-      clearMarkup();
     });
 }, DEBOUNCE_DELAY);
 
@@ -39,8 +39,6 @@ const clearMarkup = () => {
 };
 
 const renderMarkup = data => {
-  clearMarkup();
-
   if (data.length === 1) {
     infoBlockEl.insertAdjacentHTML('afterbegin', createInfoMarkup(data));
   } else {
