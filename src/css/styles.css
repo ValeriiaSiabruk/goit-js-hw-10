@@ -18,3 +18,37 @@ body {
   max-width: 320px;
   margin-bottom: 16px;
 }
+
+body {
+  margin-top: 20px;
+  margin-left: 20px;
+  background-color: rgba(29 0 255 /0.21);
+}
+
+input {
+  border: none;
+  border-radius: 15px;
+  box-shadow: -1px 5px 6px rgb(0 0 0 / 20%);
+}
+
+.country-list {
+  list-style: none;
+  padding: 0;
+}
+
+.country-list li {
+  display: flex;
+  align-items: center;
+}
+
+.country-list li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.country-list img {
+  margin-right: 7px;
+}
+
+.country-info img {
+  margin-right: 10px;
+}
